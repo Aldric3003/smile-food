@@ -1,0 +1,71 @@
+]{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="menu-container">
+    <h1>Our Menu</h1>
+    <div class="menu-grid">
+        <div class="menu-item">
+            <img src="{% static 'images/egusi and pounded yam.jpg' %}" alt="Egusi Soup" class="menu-img"> 
+            <h3>Egusi Soup and Pounded Yam</h3>
+            <p>A rich and hearty Nigerian dish made with melon seeds, vegetables, and assorted meats, served with smooth pounded yam.</p>
+            <a href=""><button class="btn">Order Now</button></a>
+        </div>
+        
+        <div class="menu-item">
+            <img src="{% static 'images/jollof rice.jpg' %}" alt="Jollof Rice" class="menu-img">
+            <h3>Jollof Rice & Chicken</h3>
+            <p>Smoky and flavorful Jollof rice served with tender grilled chicken and fried plantains.</p>
+            <button class="btn">Order Now</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="{% static 'images/bread.webp' %}" alt="Jollof Rice" class="menu-img">
+            <h3>SMILE BREAD</h3>
+            <p>Brown and soft bread, perfect for dipping in your favorite sauce.</p>
+            <button class="btn">Order Now</button>
+        </div>
+        
+        <div class="menu-item">
+            <img src="{% static 'images/amala.jpg' %}" alt="Amala" class="menu-img">
+            <h3>Amala and Ewedu</h3>
+            <p>Soft amala served with ewedu soup and a rich, spicy beef stew.</p>
+            <button class="btn">Order Now</button>
+        </div>
+        
+        <div class="menu-item">
+            <img src="{% static 'images/fried rice.jpg' %}" alt="Fried Rice" class="menu-img">
+            <h3>Fried Rice & Chicken</h3>
+            <p>Aromatic fried rice loaded with veggies, served with crispy fried chicken.</p>
+            <button class="btn">Order Now</button>
+        </div>
+        
+        <div class="menu-item">
+            <img src="{% static 'images/pepper_soup.jpg' %}" alt="Pepper Soup" class="menu-img">
+            <h3>Pepper Soup</h3>
+            <p>A spicy and aromatic soup made with fresh fish or goat meat, perfect for any occasion.</p>
+            <button class="btn">Order Now</button>
+        </div>
+        
+        <div class="menu-item">
+            <img src="{% static 'images/efo and fufu.jpg' %}" alt="Efo Riro" class="menu-img">
+            <h3>Efo Riro with Fufu</h3>
+            <p>Rich vegetable soup with assorted meats, served with soft, chewy fufu.</p>
+            <button class="btn">Order Now</button>
+        </div>
+        
+        <div class="menu-item">
+            <img src="{% static 'images/moi moi.jpeg' %}" alt="Moi Moi" class="menu-img">
+            <h3>Moi Moi & Pap</h3>
+            <p>A nutritious bean pudding served with creamy fermented corn porridge.</p>
+            <button class="btn">Order Now</button>
+        </div>
+        
+        <div class="menu-item">
+            <img src="{% static 'images/suya.jpg' %}" alt="Suya" class="menu-img">
+            <h3>Spicy Suya</h3>
+            <p>Charcoal-grilled beef skewers coated with a spicy peanut sauce.</p>
+            <button class="btn">Order Now</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

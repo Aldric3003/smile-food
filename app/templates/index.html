@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<header class="hero">
+    <div class="hero-content">
+        <div class="welcome-text">
+            <h1>WELCOME</h1>
+            <h1>TO</h1>
+            <h1><span class="smile-logo"></span> FOOD</h1>
+        </div>        
+        <p>Delicious Nigerian meals, delivered fast and fresh to your doorstep.</p>
+        <a href="{% url 'order' %}" class="btn">Order Now</a>
+    </div>
+</header>
+
+<section class="popular-dishes">
+    <h2>Popular Dishes</h2>
+    <div class="dish-container">
+        <div class="dish">
+            <img src="{% static 'images/jollof rice.jpg' %}" alt="Jollof Rice">
+            <h3>Jollof Rice & Chicken</h3>
+            <p>₦2,500</p>
+        </div>
+        <div class="dish">
+            <img src="{% static 'images/egusi and pounded yam.jpg' %}" alt="Egusi Soup">
+            <h3>Egusi Soup & Pounded Yam</h3>
+            <p>₦3,000</p>
+        </div>
+        <div class="dish">
+            <img src="{% static 'images/suya.jpg' %}" alt="Suya">
+            <h3>Spicy Suya & Killishi</h3>
+            <p>₦1,500</p>
+        </div>
+        <div class="dish">
+            <img src="{% static 'images/akara.jpg' %}" alt="Akara & Pap">
+            <h3>Akara & Pap</h3>
+            <p>₦1,200</p>
+        </div>
+        <div class="dish">
+            <img src="{% static 'images/pepper_soup.jpg' %}" alt="Pepper Soup">
+            <h3>Spicy Catfish Pepper Soup</h3>
+            <p>₦2,800</p>
+        </div>
+    </div>
+</section>
+<hr>
+<section class="special-offers">
+    <h2>Today's Special Offers</h2>
+    <p>Get 20% off on all orders above ₦5,000!</p>
+    <a href="{% url 'order' %}" class="btn">Grab the Deal</a>
+</section>
+
+<section class="food-gallery">
+    <h2>Food Gallery</h2>
+    <div class="gallery-container">
+        <img src="{% static 'images/fried rice.jpg' %}" alt="Fried Rice">
+        <img src="{% static 'images/bole_fish.jpg' %}" alt="Bole & Fish">
+        <img src="{% static 'images/jollof rice.jpg' %}" alt="Okro Soup">
+        <img src="{% static 'images/pepper_soup.jpg' %}" alt="">
+        <img src="{% static 'images/zobo.jpg' %}" alt="Zobo Drink">
+        <img src="{% static 'images/suya.jpg' %}" alt="suya">
+        <img src="{% static 'images/bread.webp' %}" alt="">
+
+
+
+
+    </div>
+</section>
+<hr>
+<section class="food-categories">
+    <h2>Browse by Category</h2>
+    <div class="categories">
+        <div class="category">🍛 Rice Dishes</div>
+        <div class="category">🍗 Grilled Foods</div>
+        <div class="category">🥤 Drinks</div>
+        <div class="category">🥪 Snacks</div>
+        <div class="category">🍞 Breakfast Meals</div>
+    </div>
+</section>
+
+<section class="customer-reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="review">
+        <p>"Best Jollof Rice in town! Quick delivery and great taste." - <strong>Ahmad</strong></p>
+    </div>
+    <div class="review">
+        <p>"Suya was perfectly spiced. 10/10!" - <strong>Popsicool</strong></p>
+    </div>
+    <div class="review">
+        <p>"Affordable and fresh! I love their Egusi Soup." - <strong>Rachael</strong></p>
+    </div>
+    <div class="review">
+        <p>"The pepper soup is divine! Tastes just like home." - <strong>Michael</strong></p>
+    </div>
+</section>
+
+<section class="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe for special offers and discounts.</p>
+    <form action="{% url 'subscribe' %}" method="POST">
+        {% csrf_token %}
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</section>
+
+<footer class="contact">
+    <p>📞 WhatsApp: +234 903 235 9849 | 📧 Email: aldric3003mercenary@gmail.com</p>
+    <p>📍 Ibadan, Nigeria</p>
+    <div class="social-icons">
+        <a href="#">📘 Facebook</a>
+        <a href="#">🐦 Twitter</a>
+        <a href="#">📸 Instagram</a>
+    </div>
+</footer>
+
+{% endblock %}

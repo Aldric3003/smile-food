@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smile Food</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+    <script src="{% static 'JS/script.js' %}" defer></script>
+
+</head>
+<body>
+    <nav>
+        <img class="logo" src="{% static 'images/smiles.png' %}" alt="logo">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'order' %}">Order</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+            {% endif %}
+        </ul>
+        <button class="hamburger" id="menuToggle" onclick="toggleMenu()">
+            <span>&#9776;</span>
+          </button>
+    </nav>
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'order' %}">Order</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+            {% endif %}
+        </ul>
+        <button class="close-btn" onclick="toggleSidebar()"></button>
+      </aside>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

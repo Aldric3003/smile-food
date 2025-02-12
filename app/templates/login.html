@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="auth-container-login">
+    <div class="auth-box-login">
+        <h2>Login To Smile</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required><br>
+            
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p>If you don't have an account? <a href="{% url 'register' %}">Register</a></p>
+    </div>
+</div>
+
+{% endblock %}
