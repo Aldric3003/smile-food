@@ -129,7 +129,8 @@ DEFAULT_FROM_EMAIL = 'aldric3003mercenary@gmail.com'  # Replace with your email
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 import os
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'app/static')]
+STATIC_ROOT= os.path.join(BASE_DIR, "static")
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'app/static')]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
